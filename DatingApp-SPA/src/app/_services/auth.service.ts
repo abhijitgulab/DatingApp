@@ -39,4 +39,8 @@ loggedIn() {
   return !this.jwtHelper.isTokenExpired(token);
 }
 
+logout() {
+  localStorage.removeItem('token');
+}
+
 }

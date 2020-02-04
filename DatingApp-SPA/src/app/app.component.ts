@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener, ViewChild } from '@angular/core';
 import { AuthService } from './_services/auth.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
