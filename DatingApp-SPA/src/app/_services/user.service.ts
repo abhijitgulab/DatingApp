@@ -20,4 +20,8 @@ getUser(id): Observable<User> {
     return this.httpClient.get<User>(this.baseUrl + '/' + id);
 }
 
+updateUser(id: number, user: User) {
+  return this.httpClient.put(this.baseUrl + '/' + id, user);
+}
+
 }
