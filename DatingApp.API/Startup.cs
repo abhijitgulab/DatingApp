@@ -41,6 +41,7 @@ namespace DatingApp.API
                 opt.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
             });
             services.AddCors(); // This is added to fix Cross orgin restriction
+            services.Configure<CloudinarySettings>(Configuration.GetSection("CloudinarySettings"));
             services.AddAutoMapper(typeof(DatingRepository).Assembly); //Use typeof resolve the ambiguity
             services.AddScoped<IAuthRepository, AuthRepository>(); // This keep the DB instance for each Web request
             services.AddScoped<IDatingRepository, DatingRepository>();

@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import * as alertify from 'alertifyjs';
-import { catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
